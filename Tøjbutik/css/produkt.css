@@ -1,0 +1,52 @@
+/* Produktdetaljer sektion styling */
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem;
+    align-items: flex-start;
+}
+
+.image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.product-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.product-info h2 {
+    margin-top: 0;
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #555;
+}
