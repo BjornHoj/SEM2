@@ -16,3 +16,26 @@ function checkDrink() {
         console.log("alkoholfri");
     }
 }
+
+/* Forkortet kode af ChatGPT
+
+const drinks = [
+    { id: "#ølElement", type: "øl" },
+    { id: "#snapsElement", type: "snaps" },
+    { id: "#colaElement", type: "cola" },
+    { id: "#faxeElement", type: "faxe" }
+];
+
+drinks.forEach(drink => {
+    document.querySelector(drink.id).addEventListener("click", function() {
+        checkDrink(drink.type);
+    });
+});
+
+function checkDrink(type) {
+    if (type === "øl" || type === "snaps") {
+        console.log("indeholder alkohol");
+    } else if (type === "cola" || type === "faxe") {
+        console.log("alkoholfri");
+    }
+}*/
