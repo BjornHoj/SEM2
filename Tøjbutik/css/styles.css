@@ -15,7 +15,7 @@ header {
     color: #fff;
     padding: 10px 20px;
     position: relative;
-    z-index: 2
+    z-index: 2;
 }
 
 nav {
@@ -76,6 +76,7 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    z-index: 3; /* Sørg for, at burgerikonet er over navigationen */
 }
 
 .burger div {
@@ -83,6 +84,20 @@ nav {
     height: 3px;
     background-color: #fff;
     margin: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Når menuen er aktiv */
+.burger.active div:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+    transform: translateY(-16px) rotate(-45deg);
 }
 
 /* Flexbox layout for main content */
@@ -123,7 +138,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 20px;
-    margin-top: auto;
+    margin-top: auto; /* Sørg for, at footeren skubbes til bunden */
 }
 
 /* Responsiv design */
