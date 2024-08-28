@@ -1,32 +1,21 @@
-* {
+/* Basisindstillinger */
+body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-}
-
-html, body {
     height: 100%;
-    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
+/* Header og navigation */
 header {
     background-color: #333;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2
 }
 
 nav {
@@ -36,7 +25,7 @@ nav {
 }
 
 .logo h1 {
-    font-size: 1.5rem;
+    margin: 0;
 }
 
 .logo a {
@@ -45,36 +34,23 @@ nav {
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    position: relative;
+    font-size: 16px;
 }
 
-.nav-links a:focus {
-    text-decoration: underline;
-    text-decoration-color: #fff; /* Hvid understregning for fokuseret link */
-}
-
+.nav-links a:hover,
 .nav-links .active {
     text-decoration: underline;
-    text-decoration-color: #fff; /* Hvid understregning for aktivt link */
-}
-
-
-.nav-links a:hover {
-    color: #ddd;
-}
-
-.nav-links .active {
-    text-decoration: underline;
-    text-decoration-color: #fff;
 }
 
 .search-container {
@@ -82,28 +58,23 @@ nav {
     align-items: center;
 }
 
-#search {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    margin-right: 0.5rem;
+.search-container input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
 }
 
-#search-button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
+.search-container button {
+    padding: 5px 10px;
     background-color: #555;
     color: #fff;
+    border: none;
     cursor: pointer;
-}
-
-#search-button:hover {
-    background-color: #444;
+    margin-left: 5px;
 }
 
 .burger {
     display: none;
+    flex-direction: column;
     cursor: pointer;
 }
 
@@ -111,57 +82,77 @@ nav {
     width: 25px;
     height: 3px;
     background-color: #fff;
-    margin: 5px;
-    transition: all 0.3s ease;
+    margin: 4px;
 }
 
-.content {
-    padding: 2rem;
-    text-align: center;
+/* Flexbox layout for main content */
+main {
+    flex: 1;
+    padding: 20px;
 }
 
+.frontpage-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.image-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.image-box:hover {
+    transform: translateY(-5px);
+    background-color: #e9e9e9;
+}
+
+/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
-    margin-top: 0;
-    width: 100%;
+    padding: 10px 20px;
+    margin-top: auto;
 }
 
+/* Responsiv design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
-        flex-direction: column;
-        background-color: #333;
         position: absolute;
-        top: 100%;
+        top: 60px;
         right: 0;
         width: 100%;
-        text-align: center;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
     }
 
-    .nav-links li {
-        margin: 1rem 0;
+    .nav-links.menu-active {
+        display: flex;
     }
 
     .burger {
-        display: block;
-    }
-
-    .burger.active .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .burger.active .line2 {
-        opacity: 0;
-    }
-
-    .burger.active .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    .nav-active {
         display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
     }
 }

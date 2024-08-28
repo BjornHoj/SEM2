@@ -1,17 +1,8 @@
+// Hent burger-ikonet og nav-links
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-item');
 
-// Toggle nav menu on burger click
+// Tilføj en klik-event til burger-ikonet
 burger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-active');
-    burger.classList.toggle('active');
-});
-
-// Add active class to clicked nav item
-navItems.forEach(item => {
-    item.addEventListener('click', () => {
-        navItems.forEach(link => link.classList.remove('active'));
-        item.classList.add('active');
-    });
+    navLinks.classList.toggle('menu-active');
 });
