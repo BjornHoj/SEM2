@@ -1,9 +1,12 @@
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
-// fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
+  .then((res) => res.json())
+  .then(showProduts);
+
 // Gøt at Kategorierne virker, men billederne fra produktliste forsvinder!!!
-fetch("https://kea-alt-del.dk/t7/api/products?limit=10")
+fetch("https://kea-alt-del.dk/t7/api/products?")
   .then((res) => res.json())
   .then(showProduts);
 
