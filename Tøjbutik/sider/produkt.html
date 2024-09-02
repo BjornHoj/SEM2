@@ -33,14 +33,19 @@
     <main>
         <section class="product-details">
             <div class="image-container">
-                <img src="path-to-your-image.jpg" alt="Produkt billede">
+                <img src="#" alt="Produkt billede">
             </div>
             <div class="product-info">
                 <h2 class="product-name">Produktnavn</h2>
                 <p><strong>Mærke:</strong> <span class="brandname">Eksempel Mærke</span></p>
-                <p><strong>Størrelse:</strong> <span="">S/M/L</span> </p>
+                <p><strong>Størrelse:</strong> <select name="Størrelse" id="Vælg_størrelse">
+                <option value="">Str.</option>
+                <option value="">Small.</option>
+                <option value="">Large</option>
+                <option value="">XL</option>
+                </select> </p>
                 <p><strong>Pris:</strong > <span class="price">prisen</span></p>
-                <p><strong>Beskrivelse:</strong> En beskrivelse af produktet.</p>
+                <p><strong>Beskrivelse:</strong> <span class="produkt_beskrivelse">En beskrivelse af produktet</span>.</p>
                 <button class="buy-button">Køb nu</button>
             </div>
         </section>

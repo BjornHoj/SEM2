@@ -9,12 +9,28 @@
 
 <h1>Gæt et Tal</h1>
 <p>Gæt et tal mellem 0 og 10:</p>
-<input type="number" id="tal" min="0" max="10">
+<input type="number" id="tal">
 <button id="guessButton">Gæt</button>
 <p id="feedback"></p>
 
 <script>
- 
+      document.querySelector("button").addEventListener("click", tjekTal);
+      let forsoeg = 0;
+      const ranNum = Math.floor(Math.random() * 11);
+
+      function tjekTal() {
+        forsoeg++;
+        const brugerTal = document.querySelector("#tal").value;
+
+        if (ranNum > brugerTal) {
+          alert("Øv! " + brugerTal + " var for lavt. Prøv igen :)");
+        } else if (ranNum < brugerTal) {
+          alert("Øv! " + brugerTal + " var for højt. Prøv igen :)");
+        } else {
+          alert(brugerTal + " er rigtigt!" + " Du brugte " + forsoeg + " forsøg. Prøv igen med et nyt tal :)");
+          location.reload();
+        }
+      }
 </script>
 
 </body>
