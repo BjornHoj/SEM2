@@ -81,6 +81,6 @@ main {
 }
 
 .soldOut > * {
-  opacity: 0.5; /* Sæt kun opacitet på børnene af soldOut */
+  opacity: 0.5; 
 }
 
