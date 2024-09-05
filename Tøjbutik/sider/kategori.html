@@ -1,65 +1,54 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bjørns Tøjbutik</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/kategori.css">
-    <link rel="stylesheet" href="../javascript/js.js">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/kategori.css" />
+    <link rel="stylesheet" href="../javascript/js.js" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">
-                <h1><a href="../Index.html">Bjørns Tøjbutik</a></h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="./produkt.html" class="nav-item">Produkt</a></li>
-                <li><a href="./produktliste.html" class="nav-item">Produktliste</a></li>
-                <li><a href="./kategori.html" class="nav-item">Kategori</a></li>
-            </ul>
-            <div class="search-container">
-                <input type="text" placeholder="Søg varer..." id="search">
-                <button id="search-button">Søg</button>
-            </div>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+      <nav>
+        <div class="logo">
+          <h1><a href="../Index.html">Bjørns Tøjbutik</a></h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./produkt.html" class="nav-item">Produkt</a></li>
+          <li>
+            <a href="./produktliste.html" class="nav-item">Produktliste</a>
+          </li>
+          <li><a href="./kategori.html" class="nav-item">Kategori</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" placeholder="Søg varer..." id="search" />
+          <button id="search-button">Søg</button>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
     </header>
 
     <main>
-           <main>
-            <section class="categories">
-                <div class="category-box">
-                    <a href="accessories.html">Accessories</a>
-                </div>
-                <div class="category-box">
-                    <a href="apparel.html">Apparel</a>
-                </div>
-                <div class="category-box">
-                    <a href="footwear.html">Footwear</a>
-                </div>
-                <div class="category-box">
-                    <a href="free-items.html">Free Items</a>
-                </div>
-                <div class="category-box">
-                    <a href="personal-care.html">Personal Care</a>
-                </div>
-                <div class="category-box">
-                    <a href="sporting-goods.html">Sporting Goods</a>
-                </div>
-            </section>
-        </main>
+      <section class="letterGroup categories">
+        <template><div class="category-box"><a href="produktliste.html"></a></div
+        ></template>
+     
+      </section>
+
+
+    
     </main>
 
     <footer>
-        <p>&copy; 2024 Bjørns Tøjbutik. Alle rettigheder forbeholdes.</p>
+      <p>&copy; 2024 Bjørns Tøjbutik. Alle rettigheder forbeholdes.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script src="../javascript/js.js"></script>
+    <script src="../javascript/kategori.js"></script>
+  </body>
 </html>

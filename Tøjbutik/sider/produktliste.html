@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bjørns Tøjbutik</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../javascript/js.js">
-    <link rel="stylesheet" href="../css/produktliste.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../javascript/js.js" />
+    <link rel="stylesheet" href="../css/produktliste.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">
-                <h1><a href="../Index.html">Bjørns Tøjbutik</a></h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="./produkt.html">Produkt</a></li>
-                <li><a href="./produktliste.html">Produktliste</a></li>
-                <li><a href="./kategori.html">Kategori</a></li>
-            </ul>
-            <div class="search-container">
-                <input type="text" placeholder="Søg varer..." id="search">
-                <button id="search-button">Søg</button>
-            </div>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+      <nav>
+        <div class="logo">
+          <h1><a href="../Index.html">Bjørns Tøjbutik</a></h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./produkt.html">Produkt</a></li>
+          <li><a href="./produktliste.html">Produktliste</a></li>
+          <li><a href="./kategori.html">Kategori</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" placeholder="Søg varer..." id="search" />
+          <button id="search-button">Søg</button>
+        </div>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="product-list">
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-            <div class="product-box"></div>
-        </section>
+      <template id="smallProductTemplate">
+        <article class="smallProduct">
+          <div class="image-container">
+            <img class="foto" src="#" alt="her skal være et billede" />
+          </div>
+          <div class="product-info">
+            <h3>Sahara Team India Fanwear</h3>
+            <p>
+              <strong>Mærke:</strong>
+              <span class="brandname">Eksempel Mærke</span>
+            </p>
+            <p><strong>Prev: </strong><span class="price"> 1000</span> DKK</p>
+            <p>
+              <strong>Now: </strong>
+              <span class="discount-price">1500</span> DKK
+            </p>
+            <p>
+              <strong>Nedsat i %: </strong
+              ><span class="discount-procent"> -34%</span>
+            </p>
+            <a class="read_more" href="produkt.html">Read More</a>
+          </div>
+        </article>
+      </template>
     </main>
 
     <footer>
-        <p>&copy; 2024 Bjørns Tøjbutik. Alle rettigheder forbeholdes.</p>
+      <p>&copy; 2024 Bjørns Tøjbutik. Alle rettigheder forbeholdes.</p>
     </footer>
-
-    <script src="script.js"></script>
-</body>
+    <script src="../javascript/productlist.js"></script>
+    <script src="../javascript/js.js"></script>
+  </body>
 </html>
