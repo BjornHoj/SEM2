@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Form-Test</h1>
+    <p>Udfyld dine informationer</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label for="first-name">Fornavn: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Efternavn: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked />Personlig</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" />Offentlig</label>
+      </fieldset>
+      <fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
